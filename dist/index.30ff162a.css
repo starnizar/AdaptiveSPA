@@ -187,6 +187,13 @@ header{
     padding: 50px 20px;
 }
 
+.sellingContent, .installationContent, .introductionContent{
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header h2{
     padding: 20px 0;
     font-style: normal;

@@ -884,12 +884,14 @@ const hideBurgerMenu = ()=>{
 };
 window.addEventListener('scroll', (event)=>{
     window.scrollY >= 500 ? upArrow.style.transform = 'translateY(0)' : upArrow.style.transform = 'rotate(180deg) translateY(-70px)';
-    if (scrollPosition > window.scrollY) {
-        hideBurgerMenu();
-        burgerWrapper.style.transform = 'translateY(0)';
-    } else {
-        hideBurgerMenu();
-        burgerWrapper.style.transform = 'translateY(-75px)';
+    if (window.scrollY > 0) {
+        if (scrollPosition > window.scrollY) {
+            hideBurgerMenu();
+            burgerWrapper.style.transform = 'translateY(0)';
+        } else {
+            hideBurgerMenu();
+            burgerWrapper.style.transform = 'translateY(-75px)';
+        }
     }
     window.scrollY <= 0 && showBurgerMenu();
 });
