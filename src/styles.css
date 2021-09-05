@@ -123,7 +123,6 @@ nav a{
 }
 
 .upArrow{
-    display: none;
     z-index: 1000;
     position: fixed;
     bottom: 20px;
@@ -132,6 +131,8 @@ nav a{
     opacity: 0.1;
     transition: .25s;
     cursor: pointer;
+    background: white;
+    border-radius: 50%;
 }
 .upArrow:hover{
     opacity: 0.5;
