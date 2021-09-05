@@ -33,7 +33,25 @@
         <nav class="burgerNav">
             <img class="logo" src="./assets/img/Logo.svg" alt="MainLogo">
             <img class="Burger" src="assets/img/Burger.svg" alt="Burger">
+            <img class="Cross" src="assets/img/Cross.svg" alt="Cross">
         </nav>
+        <ul class="burgerList">
+            <li>
+                <img src="./assets/img/1SLogo.svg" alt="1S">
+                <img src="./assets/img/1SLogo_2.svg" alt="1SLogo2">
+                <img src="./assets/img/CRALogo.svg" alt="CRA">
+            </li>
+            <li>
+                <p>+7 (495) 664-30-26</p>
+                <p>info@rieki.ru</p>
+            </li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#competencies">Компетенции</a></li>
+            <li><a href="#oneS">1С</a></li>
+            <li><a href="#weCanDo">Услуги</a></li>
+            <li><a href="#escort">ИТС</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
     </div>
     <div id="main" class="headerWrapper">
         <header>
@@ -378,5 +396,46 @@
             </div>
         </div>
     </div>
+    <script>
+        const burgerWrapper = document.querySelector('.burgerNavWrapper')
+        const burger = document.querySelector('.Burger')
+        const cross = document.querySelector('.Cross')
+        const burgerList = document.querySelector('.burgerList')
+        let scrollPosition = 0
+
+        burgerList.style.display = 'none'
+
+        const toggleBurgerMenu = () => {
+            if (burgerList.style.display === 'none'){
+                burgerList.style.display = 'block'
+                cross.style.display = 'block'
+                burger.style.display = 'none'
+            } else {
+                burgerList.style.display = 'none'
+                cross.style.display = 'none'
+                burger.style.display = 'block'
+            }
+        }
+
+        const hideBurgerMenu = () => {
+            scrollPosition = window.scrollY
+            burgerList.style.display = 'none'
+            cross.style.display = 'none'
+            burger.style.display = 'block'
+        }
+
+        window.addEventListener('scroll', event => {
+            if (scrollPosition > window.scrollY) {
+                hideBurgerMenu()
+                burgerWrapper.style.transform = 'translateY(0)'
+            } else {
+                hideBurgerMenu()
+                burgerWrapper.style.transform = 'translateY(-75px)'
+            }
+        })
+        burger.addEventListener('click', () => toggleBurgerMenu())
+        cross.addEventListener('click', () => toggleBurgerMenu())
+
+    </script>
 </body>
 </html>

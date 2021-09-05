@@ -68,30 +68,80 @@ nav a{
     justify-content: space-between;
 }
 
-.headerWrapper{
-    background-image: url("BackGround1.40da213c.svg");
-    background-size: cover;
-    width: 100%;
-}
-
 .burgerNavWrapper{
     display: none;
     position: fixed;
-    top: 0;
     z-index: 1000;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
     background: #FFFFFF;
-    margin: 0 auto;
     border: 1px solid #E8E8E8;
     box-sizing: border-box;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+    transition: .25s;
 }
 
 .burgerNav{
     max-width: 290px;
-    justify-content: space-between;
     background: #FFFFFF;
-    padding: 17px 10px;
+    padding: 10px 0;
+}
+
+.Burger{
+    display: block;
+    cursor: pointer;
+}
+
+.Cross{
+    display: none;
+    cursor: pointer;
+}
+
+.burgerNavWrapper ul {
+    display: none;
+    position: absolute;
+    top: 74px;
+    width: 100%;
+    max-width: 290px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.burgerNavWrapper ul li{
+    list-style: none;
+    background: #fbfbfb;
+    padding: 1em 0;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.burgerNavWrapper ul li:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.burgerNavWrapper ul li:nth-child(2) p:first-child{
+    font-weight: bold;
+}
+
+.burgerNavWrapper ul li:nth-child(2) p:last-child{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #787878;
+}
+
+.headerWrapper{
+    background-image: url("BackGround1.40da213c.svg");
+    background-size: cover;
+    width: 100%;
+    padding-top: 75px;
 }
 
 header{
