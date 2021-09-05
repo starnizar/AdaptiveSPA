@@ -437,13 +437,14 @@
             window.scrollY >= 500
                 ? upArrow.style.transform ='translateY(0)'
                 : upArrow.style.transform ='rotate(180deg) translateY(-70px)'
-
-            if (scrollPosition > window.scrollY) {
+            if (window.scrollY > 0) {
+                if (scrollPosition > window.scrollY) {
                 hideBurgerMenu()
                 burgerWrapper.style.transform = 'translateY(0)'
-            } else {
-                hideBurgerMenu()
-                burgerWrapper.style.transform = 'translateY(-75px)'
+                } else {
+                    hideBurgerMenu()
+                    burgerWrapper.style.transform = 'translateY(-75px)'
+                }
             }
             window.scrollY <= 0 && showBurgerMenu()
         })
