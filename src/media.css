@@ -1,0 +1,234 @@
+@media (max-width: 1400px) {
+    header,
+    .competencies,
+    .oneS,
+    .weCanDo,
+    .products,
+    .about,
+    .escort,
+    .contacts,
+    .policy
+    {
+        padding-left:0.5em;
+        padding-right:0.5em;
+    }
+    .weCanDoLine{
+        width: 75vw;
+    }
+}
+@media (max-width: 1200px) {
+    .oneSContentWrapper{
+        flex-wrap: wrap;
+    }
+    .circleOne, .circleTwo, .circleThree{
+        order: -1;
+        bottom: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        padding-top: 2em;
+    }
+    .oneSContent:nth-child(2) div{
+        padding: 2em 1em;
+    }
+    .oneSContent:nth-child(3) div{
+        padding: 2em 1em;
+    }
+    .StripedLine{
+        display: none;
+    }
+}
+@media (max-width: 1000px){
+    .contacts{
+        top: 0;
+        flex-direction: column;
+    }
+    iframe{
+        padding: 2em 0;
+    }
+    footer img{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        padding-bottom: 3em;
+    }
+    footer h1{
+        padding-bottom: 1em;
+    }
+    .phone{
+        border: none;
+        padding-bottom: 0;
+    }
+    .email{
+        padding-top: 2em;
+    }
+}
+
+@media (max-width: 800px) {
+    .navWrapper{
+        display: none;
+    }
+    /*.burgerNavWrapper{*/
+    /*    display: block;*/
+    /*}*/
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header h2{
+        font-size: 21px;
+        line-height: 25px;
+    }
+    header a{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .selling,.installation,.introduction{
+        width: 100%;
+        border: 1px solid #EAEAEA;
+    }
+
+    .competenciesContentWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .competencies h1{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .competencies h4{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .competencies p{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .analytics,.development,.support{
+        width: 100%;
+        max-width: 290px;
+        margin-bottom: 10px;
+    }
+    .oneSWrapper h1{
+        padding: 0.5em 0;
+    }
+    .oneSContentWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .oneSContent{
+        max-width: 290px;
+    }
+    .oneSContent img {
+        padding-left: 0;
+        max-width: 70px;
+    }
+    .StripedLine{
+        display: none;
+    }
+
+    .weCanDoLine{
+        display: none;
+    }
+    .weCanDoContentWrapper{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2.2em;
+    }
+    .weCanDo h1{
+        padding: 1.2em 0 1.35em;
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .weCanDo h3{
+        font-size: 18px;
+        line-height: 21px;
+        padding: 1em 0 0.5em;
+    }
+    .weCanDo p{
+        font-size: 14px;
+        line-height: 16px;
+        padding-bottom: 3em;
+    }
+
+    .products h1{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .products h4{
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    .aboutImg, .aboutTopLine, .aboutBotLine{
+        display: none;
+    }
+    .about{
+        max-width: 290px;
+    }
+    .about h1{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .company p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .comment{
+        flex-direction: column;
+        margin: 0;
+    }
+    .quotes{
+        width: 70px;
+        padding: 2em 0 1em;
+    }
+    .comment p{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .escort{
+        max-width: 290px;
+    }
+    .escort h1{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .escort h3{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .escort p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    footer h1{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .address p:first-child, .phone p:first-child, .email p:first-child{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .address p:last-child, .phone p:last-child, .email p:last-child{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .phoneEmail{
+        padding-top: 2em;
+        order: 1;
+    }
+
+    .policy{
+        max-width: 290px;
+        display: flex;
+        flex-direction: column;
+    }
+    .policy a{
+        margin-bottom: 0.25em;
+    }
+}
