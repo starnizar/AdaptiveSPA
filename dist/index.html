@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="navWrapper">
+        <img class="upArrow" src="/upArrow.9d0960e0.svg" alt="Up Arrow">
         <nav>
             <ul>
                 <li><a href="#about">О компании</a></li>
@@ -30,7 +31,8 @@
     </div>
     <div class="burgerNavWrapper">
         <nav class="burgerNav">
-            <img class="logo" src="/Logo.3db35bd4.svg" alt="MainLogo">
+            <a href="#main"><img class="logo" src="/Logo.3db35bd4.svg" alt="MainLogo"></a>
+
             <img class="Burger" src="/Burger.f1a33d1e.svg" alt="Burger">
             <img class="Cross" src="/Cross.9ce1961f.svg" alt="Cross">
         </nav>
@@ -395,6 +397,7 @@
             </div>
         </div>
     </div>
+
     <script>// modules are defined as an array
 // [ module function, map of requires ]
 //
@@ -537,12 +540,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"3HP4F":[function(require,module,exports) {
+})({"eZjjk":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4e5dac8afe405db7";
-module.bundle.HMR_BUNDLE_ID = "115a655cb733cccb";
+module.bundle.HMR_BUNDLE_ID = "37e63e2ac1c8830c";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -851,11 +854,12 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["3HP4F"], null, "parcelRequire1620")
+},{}]},["eZjjk"], null, "parcelRequire1620")
 const burgerWrapper = document.querySelector('.burgerNavWrapper');
 const burger = document.querySelector('.Burger');
 const cross = document.querySelector('.Cross');
 const burgerList = document.querySelector('.burgerList');
+const upArrow = document.querySelector('.upArrow');
 let scrollPosition = 0;
 burgerList.style.display = 'none';
 const toggleBurgerMenu = ()=>{
@@ -876,6 +880,7 @@ const hideBurgerMenu = ()=>{
     burger.style.display = 'block';
 };
 window.addEventListener('scroll', (event)=>{
+    window.scrollY >= 500 ? upArrow.style.transform = 'translateY(0)' : upArrow.style.transform = 'rotate(180deg) translateY(-70px)';
     if (scrollPosition > window.scrollY) {
         hideBurgerMenu();
         burgerWrapper.style.transform = 'translateY(0)';
@@ -888,7 +893,10 @@ burger.addEventListener('click', ()=>toggleBurgerMenu()
 );
 cross.addEventListener('click', ()=>toggleBurgerMenu()
 );
+upArrow.addEventListener('click', ()=>window.scrollTo(0, 0)
+);
 
 </script>
+
 </body>
 </html>

@@ -33,6 +33,10 @@ li{
 }
 nav li{
     list-style: none;
+    transition: .25s;
+}
+nav li a:hover{
+    color: #A6A6A6;
 }
 nav li:first-child{
     margin-left: 10px;
@@ -116,6 +120,20 @@ nav a{
     font-size: 14px;
     line-height: 16px;
     color: #787878;
+}
+
+.upArrow{
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    width: 50px;
+    right: 20px;
+    opacity: 0.1;
+    transition: .25s;
+    cursor: pointer;
+}
+.upArrow:hover{
+    opacity: 0.5;
 }
 
 .headerWrapper{
@@ -389,6 +407,11 @@ header h2{
     align-items: start;
     border: 1px solid #E9E9E9;
     box-sizing: border-box;
+    transition: .3s;
+}
+.product:hover{
+    background: #EBEBEB;
+    cursor: pointer;
 }
 .product h4{
     padding: 1.5em;
@@ -628,6 +651,12 @@ iframe{
     margin: 0 auto;
     max-width: 1400px;
     padding: 1.2em 0;
+}
+.policy a{
+    transition: .25s;
+}
+.policy a:hover{
+    color: #FFFFFF;
 }
 .footerTopLine{
     position: absolute;

@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="navWrapper">
+        <img class="upArrow" src="assets/img/upArrow.svg" alt="Up Arrow">
         <nav>
             <ul>
                 <li><a href="#about">О компании</a></li>
@@ -31,7 +32,8 @@
     </div>
     <div class="burgerNavWrapper">
         <nav class="burgerNav">
-            <img class="logo" src="./assets/img/Logo.svg" alt="MainLogo">
+            <a href="#main"><img class="logo" src="./assets/img/Logo.svg" alt="MainLogo"></a>
+
             <img class="Burger" src="assets/img/Burger.svg" alt="Burger">
             <img class="Cross" src="assets/img/Cross.svg" alt="Cross">
         </nav>
@@ -396,11 +398,13 @@
             </div>
         </div>
     </div>
+
     <script>
         const burgerWrapper = document.querySelector('.burgerNavWrapper')
         const burger = document.querySelector('.Burger')
         const cross = document.querySelector('.Cross')
         const burgerList = document.querySelector('.burgerList')
+        const upArrow = document.querySelector('.upArrow')
         let scrollPosition = 0
 
         burgerList.style.display = 'none'
@@ -425,6 +429,10 @@
         }
 
         window.addEventListener('scroll', event => {
+            window.scrollY >= 500
+                ? upArrow.style.transform ='translateY(0)'
+                : upArrow.style.transform ='rotate(180deg) translateY(-70px)'
+
             if (scrollPosition > window.scrollY) {
                 hideBurgerMenu()
                 burgerWrapper.style.transform = 'translateY(0)'
@@ -435,7 +443,8 @@
         })
         burger.addEventListener('click', () => toggleBurgerMenu())
         cross.addEventListener('click', () => toggleBurgerMenu())
-
+        upArrow.addEventListener('click', () => window.scrollTo(0, 0))
     </script>
+
 </body>
 </html>
