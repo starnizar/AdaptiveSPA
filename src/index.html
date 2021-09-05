@@ -409,6 +409,7 @@
 
         burgerList.style.display = 'none'
 
+
         const toggleBurgerMenu = () => {
             if (burgerList.style.display === 'none'){
                 burgerList.style.display = 'block'
@@ -419,6 +420,10 @@
                 cross.style.display = 'none'
                 burger.style.display = 'block'
             }
+        }
+        
+        const showBurgerMenu = () => {
+            burgerWrapper.style.transform = 'translateY(0)'
         }
 
         const hideBurgerMenu = () => {
@@ -440,6 +445,7 @@
                 hideBurgerMenu()
                 burgerWrapper.style.transform = 'translateY(-75px)'
             }
+            window.scrollY <= 0 && showBurgerMenu()
         })
         burger.addEventListener('click', () => toggleBurgerMenu())
         cross.addEventListener('click', () => toggleBurgerMenu())

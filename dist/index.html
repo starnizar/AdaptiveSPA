@@ -873,6 +873,9 @@ const toggleBurgerMenu = ()=>{
         burger.style.display = 'block';
     }
 };
+const showBurgerMenu = ()=>{
+    burgerWrapper.style.transform = 'translateY(0)';
+};
 const hideBurgerMenu = ()=>{
     scrollPosition = window.scrollY;
     burgerList.style.display = 'none';
@@ -888,6 +891,7 @@ window.addEventListener('scroll', (event)=>{
         hideBurgerMenu();
         burgerWrapper.style.transform = 'translateY(-75px)';
     }
+    window.scrollY <= 0 && showBurgerMenu();
 });
 burger.addEventListener('click', ()=>toggleBurgerMenu()
 );
