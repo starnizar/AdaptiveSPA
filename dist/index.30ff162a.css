@@ -143,6 +143,7 @@ nav a{
 }
 
 .upArrow{
+    display: none;
     z-index: 1000;
     position: fixed;
     bottom: 20px;
