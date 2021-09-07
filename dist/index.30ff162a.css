@@ -189,9 +189,6 @@ header{
 
 .sellingContent, .installationContent, .introductionContent{
     max-width: 290px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 header h2{
