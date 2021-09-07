@@ -160,10 +160,9 @@ nav a{
 }
 
 .headerWrapper{
-    background-image: url("BackGround1.40da213c.svg");
+    background-image: url("BackGround1.2acd52f1.jpg");
     background-size: cover;
     width: 100%;
-    padding-top: 75px;
 }
 
 header{
@@ -284,7 +283,7 @@ header h2{
 
 .oneSWrapper{
     width: 100%;
-    background-image: url("BackGround2.7bafbb16.svg");
+    background-image: url("BackGround2.e31587e0.jpg");
     background-size: cover;
 }
 
@@ -385,7 +384,7 @@ header h2{
 .weCanDoWrapper{
     width: 100%;
     background-size: cover;
-    background-image: url("BackGround3.7040cf8f.svg");
+    background-image: url("BackGround3.ca1bfcfd.jpg");
 }
 
 .weCanDo{
@@ -673,7 +672,7 @@ header h2{
 .footerWrapper{
     position: relative;
     width: 100%;
-    background-image: url("BackGround4.2e2847f4.svg");
+    background-image: url("BackGround4.86f6803e.jpg");
     background-size: cover;
 }
 
